@@ -1,4 +1,4 @@
-import { EndpointDoc } from "../contracts/endpoint-doc"
+import { EndpointDoc } from "../contracts/endpoint-doc";
 
 export const healthDocs: EndpointDoc[] = [
   {
@@ -13,4 +13,4 @@ export const healthDocs: EndpointDoc[] = [
       },
     },
   },
-]
+];
