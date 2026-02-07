@@ -11,6 +11,7 @@ const envSchema = z.object({
     .refine((v) => !Number.isNaN(v), {
       message: "PORT must be a number",
     }),
+  JWT_SECRET: z.string().default("secret"),
 
   // Exemplo de boolean
   ENABLE_SWAGGER: z
