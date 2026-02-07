@@ -1,3 +1,5 @@
+import "reflect-metadata";
+
 import "dotenv/config";
 import { env } from "@infrastructure/config/env";
 import { createApp } from "./app";

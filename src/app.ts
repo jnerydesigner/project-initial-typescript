@@ -1,5 +1,6 @@
-import { healthRoutes } from "@presenters/routes/health.route";
 import express from "express";
+import "@infrastructure/containers";
+import { healthRoutes } from "@presenters/routes/health.route";
 import swaggerUi from "swagger-ui-express";
 import { openapiSpecification } from "./app/openapi";
 

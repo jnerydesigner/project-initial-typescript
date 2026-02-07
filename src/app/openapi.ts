@@ -1,24 +1,25 @@
-import { generatePaths } from './docs/generate-openapi';
+import { env } from "@infrastructure/config/env";
+import { generatePaths } from "./docs/generate-openapi";
 
 export const openapiSpecification = {
-  openapi: '3.0.0',
+  openapi: "3.0.0",
   info: {
-    title: 'TypeScript Initial Project API',
-    version: '1.0.0',
-    description: 'Documentação da API do TypeScript Initial Project',
+    title: "TypeScript Initial Project API",
+    version: "1.0.0",
+    description: "Documentação da API do TypeScript Initial Project",
   },
   servers: [
     {
-      url: 'http://localhost:3000',
-      description: 'Servidor Local',
+      url: `http://localhost:${env.SERVER_PORT}`,
+      description: "Servidor Local",
     },
   ],
   components: {
     securitySchemes: {
       bearerAuth: {
-        type: 'http',
-        scheme: 'bearer',
-        bearerFormat: 'JWT',
+        type: "http",
+        scheme: "bearer",
+        bearerFormat: "JWT",
       },
     },
   },
