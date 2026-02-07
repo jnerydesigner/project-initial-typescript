@@ -1,6 +1,6 @@
-import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import prettier from 'eslint-plugin-prettier';
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import prettier from "eslint-plugin-prettier";
 
 export default [
   js.configs.recommended,
@@ -8,7 +8,14 @@ export default [
   {
     plugins: { prettier },
     rules: {
-      'prettier/prettier': 'error',
+      "prettier/prettier": [
+        "error",
+        {
+          singleQuote: false,
+          semi: true,
+          printWidth: 100,
+        },
+      ],
     },
   },
 ];
