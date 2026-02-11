@@ -7,6 +7,10 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types"
+    ],
     "paths": {
       "@appplication/*": [
         "src/app/*"
@@ -20,6 +24,11 @@
       "@presenters/*": [
         "src/presenters/*"
       ]
-    }
-  }
+    },
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
